@@ -1,29 +1,32 @@
-# spotify-downloader
-Automates weekly downloads of Spotify playlists using spotDL, generates .m3u files, and sends a Telegram message with newly added songs. Ideal for personal music libraries and scheduled syncing.
-
 # 🎵 Spotify Weekly Downloader
 
-Este script en Bash descarga automáticamente varias playlists de Spotify usando `spotDL`, genera archivos `.m3u` para cada lista, y envía un resumen por Telegram si hay canciones nuevas.
+Automates weekly downloads of Spotify playlists using [spotDL](https://github.com/spotDL/spotify-downloader), generates `.m3u` files for each playlist, and sends a Telegram notification with any newly added songs. Perfect for building your own music library and syncing it with media players.
 
-## 📦 Requisitos
+## 📦 Requirements
 
 - Docker
-- Cuenta de Telegram con un bot y chat ID
-- Acceso a las playlists de Spotify (públicas)
+- Telegram bot token and chat ID
+- Access to public Spotify playlists
+- Optional: [Navidrome](https://www.navidrome.org/) to stream and manage the downloaded music
 
-## 🛠️ Configuración
+## 🛠️ Configuration
 
-1. Clona el repositorio y edita el script `spotify-weekly-downloader.sh`
-2. Reemplaza los siguientes valores:
-   - `/ruta/a/tu/musica` por tu carpeta local de música
-   - `/ruta/a/cache/spotdl` por la ruta de caché de `spotDL`
-   - `TU_BOT_TOKEN` por el token de tu bot de Telegram
-   - `TU_CHAT_ID` por tu ID de chat
+1. Clone this repository and edit the script `spotify-weekly-downloader.sh`
+2. Replace the following values:
+   - `/ruta/a/tu/musica` → your music folder path
+   - `/ruta/a/cache/spotdl` → your spotDL cache path
+   - `TU_BOT_TOKEN` → your Telegram bot token
+   - `TU_CHAT_ID` → your Telegram chat ID
 
-## 🚀 Uso
+> Tip: All playlists are defined in the `PLAYLISTS` array using the format `name|url`
+
+## 🚀 Usage
+
+Run the script manually:
 
 ```bash
 bash spotify-weekly-downloader.sh
+
 
 Puedes automatizarlo con cron para que se ejecute semanalmente, por ejemplo los lunes a las 7:00:
 
