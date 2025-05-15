@@ -19,7 +19,7 @@ Automate weekly downloads of Spotify playlists using [spotDL](https://github.com
 1. Clone the repo:
 
    ```bash
-   git clone https://github.com/tuusuario/spotify-weekly-downloader.git
+   git clone https://github.com/jgcmurcia/spotify-weekly-downloader.git
    cd spotify-weekly-downloader
 
 
